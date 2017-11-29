@@ -3,21 +3,42 @@
 
 void getSum();
 void getBinery();
-int getTheBiggestBinery(int, int);
+int getTheBiggestBinery(int);
 void getMinBetweenK();
 int getMinBetween(int);
 int getInputNum(int, int);
 void getResultT();
 void getResult(int);
+void perfectNum();
+int perfectnumLogic(int);
 
-void main(){
-	//getSum();
-	//getBinery();
-	//getMinBetweenK();
-	getResultT();
 
+
+int  main(){
+	int select=0, i, all_Ex_in_loop=0;
+	printf("Run menu once or cyclically?\n(Once - enter 0, cyclically - enter other number) ");
+		if (scanf("%d", &all_Ex_in_loop) == 1)
+			do
+			{
+				for (i=1; i<=5; i++)
+					printf("Ex%d--->%d\n", i, i);
+				printf("EXIT-->0\n");
+				do {
+					select=0;
+					printf("please select 0-5 : ");
+					scanf("%d",&select);
+				} while ((select<0)||(select>5));
+				switch (select)
+				{
+				case 1: getSum(); break;
+				case 2: getBinery(); break;
+				case 3: getMinBetweenK(); break;
+				case 4: getResultT(); break;
+				case 5: perfectNum(); break;
+				}
+			} while (all_Ex_in_loop && select);
+			return 0;
 }
-
 void getSum(){
 	// input = get inpur from UI, begin = the first num, sum = calc the sum, kefel = kefel, temp = cal the environment 
 	int input = 0, i, begin = 1, sum = 1, kefel = 10, temp= 1;
@@ -40,30 +61,38 @@ void getSum(){
 
 }
 void getBinery(){
-	int input, length, result = 0;
+	int length, result;
 	length = getInputNum(0,0);
-	input = getInputNum(0,0);
-
-	result = getTheBiggestBinery(input, length);
+	result = getTheBiggestBinery(length);
 }
+int getTheBiggestBinery(int length){
+	int i, current, previous, counter =1 , index = 1, biggest=1;
+	int indexStart;
 
-int getTheBiggestBinery(int input, int length){
-	int current,previous,counter=0,indexStart, j;
-
-	indexStart = length+1;
-	previous = input %10;
-	input = input /10;
-	for(j=2; j<length; j++){
-		current = input%10;
-		// check if the same number;
-		if(previous==current){
-			counter++;
+	previous = getInputNum(0,0);
+	for(i=2; i<=length; i++){
+		current = getInputNum(0,0);
+		// check if the same value
+		if(current == previous){
+			counter ++;
 		}
-		else
-			// save previous num
-			previous=current;
-		indexStart--;
+		else 
+		{
+			// set the biggest and the position of the forst element
+			if(counter >1 && counter> biggest){
+				index = i-counter;
+				biggest = counter;
+			}
+			// reset counter
+			if(counter>1)
+				counter = 1;
+		}
+		// save previous value
+		previous = current;
 	}
+	return index;
+
+
 }
 void getMinBetweenK(){
 
@@ -74,7 +103,6 @@ void getMinBetweenK(){
 	result=getMinBetween(input);
 
 }
-
 int getMinBetween(int num){
 
 	// flag is found smaller sum than my num
@@ -200,13 +228,39 @@ void getResult(int num){
 		printf("The result: (%d - %d)",result_x_a,result_y_a);
 	}
 }
+void perfectNum(){
+	int num, result;
 
+	num = getInputNum(1,0);
+	result = perfectnumLogic(num);
+}
+int perfectnumLogic(int n){
+
+	int sum =0, result =0, number,j, i=0;
+	number = n;
+	// get how many digits the num has 
+	while(number!=0){
+		number/=10;
+		i++;
+	}
+	// set the original num again
+	number = n;
+	// sum each num with pow
+	for(j = i; j>0; j--){
+		sum += (int)pow(number%10,i);
+		number /=10;
+	}
+	// set conclusion
+	if(sum == n)
+		result = 1;
+	return result;
+}
 int getInputNum(int hasSondition, int minNum){
 
-	int input = 0;
+	int input = -1;
 	if(hasSondition==0)
 	{
-		printf("PLeaze enter the number\n");
+		printf("Please enter the number\n");
 		scanf("%d",&input);
 	}
 	else{
