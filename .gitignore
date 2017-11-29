@@ -1,3 +1,40 @@
+
+Skip to content
+This repository
+
+    Pull requests
+    Issues
+    Marketplace
+    Explore
+
+    @sergienko4
+
+2,315
+58,096
+
+    25,819
+
+github/gitignore
+Code
+Pull requests 148
+Projects 0
+Insights
+gitignore/C.gitignore
+f76d089 on Nov 1, 2016
+@chaosdefinition chaosdefinition Update C.gitignore
+@rye
+@dashed
+@aarian93p
+@Leandros
+@snisarg
+@mattjeffery
+@dybekm
+@eugpermar
+@starrify
+@chaosdefinition
+@arsenm
+@adericbourg
+53 lines (44 sloc) 430 Bytes
 # Prerequisites
 *.d
 
@@ -50,3 +87,18 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+    © 2017 GitHub, Inc.
+    Terms
+    Privacy
+    Security
+    Status
+    Help
+
+    Contact GitHub
+    API
+    Training
+    Shop
+    Blog
+    About
+

@@ -21,10 +21,9 @@ void main(){
 void getSum(){
 	// input = get inpur from UI, begin = the first num, sum = calc the sum, kefel = kefel, temp = cal the environment 
 	int input = 0, i, begin = 1, sum = 1, kefel = 10, temp= 1;
-	
-	printf("Enter number \n");
+
 	// get input from console
-	scanf("%d",&input);
+	input = getInputNum(0,0);
 
 	for(i = 1; i<input; i++){
 		// calculation 
@@ -35,25 +34,21 @@ void getSum(){
 
 	// print result
 	printf("The num u entered is: %d the sum is: %d \n",input, sum);
-	
 
-	
+
+
 
 }
 void getBinery(){
 	int input, length, result = 0;
-    printf("enter the number of nums \n");
-    scanf("%d",&length);
+	length = getInputNum(0,0);
+	input = getInputNum(0,0);
 
-    printf("enter the \n");
-    scanf("%d",&input);
 	result = getTheBiggestBinery(input, length);
-
-
 }
 
 int getTheBiggestBinery(int input, int length){
- int current,previous,counter=0,indexStart, j;
+	int current,previous,counter=0,indexStart, j;
 
 	indexStart = length+1;
 	previous = input %10;
@@ -61,12 +56,12 @@ int getTheBiggestBinery(int input, int length){
 	for(j=2; j<length; j++){
 		current = input%10;
 		// check if the same number;
-        if(previous==current){
-            counter++;
-        }
+		if(previous==current){
+			counter++;
+		}
 		else
-		// save previous num
-		previous=current;
+			// save previous num
+			previous=current;
 		indexStart--;
 	}
 }
@@ -84,12 +79,12 @@ int getMinBetween(int num){
 
 	// flag is found smaller sum than my num
 	int hasMaller = 0;
-	
+
 	int min, input = 0;
-	
+
 	// get num from console
 	min = getInputNum(0,0);
-	
+
 	while(hasMaller == 0 && input != -1){
 		input = getInputNum(0,0);
 
@@ -114,10 +109,10 @@ void getResultT(){
 void getResult(int num){
 	// temp var for manipulation of logic
 	int x=3, y=5, temp, tempX, tempY;
-	
+
 	// will save the first and the last result 
 	int result_x_a, result_y_a, result_x_b, result_y_b;
-	
+
 	int sq;
 	// flag to know if i have more than one solution also to get the smallest betwwen results;
 	int flag = 0;
@@ -127,12 +122,12 @@ void getResult(int num){
 
 	while (sq>0){
 		sq = (int) sqrt(sq);
-		
+
 		if(sq==1)
 			flagsqZero ++;
 		if(flagsqZero == 2)
 			sq = 0;
-		
+
 		// check if it right for X
 		tempX = x*sq;
 		tempY = (num-tempX)/y;
@@ -141,17 +136,17 @@ void getResult(int num){
 		// check if the nums are correct for X
 		if(temp == num)
 		{	if(flag == 0)	
-			{	
-				result_x_a=sq;
-				result_y_a=tempY;
-			}
-			else
-			{
-				result_x_b=sq;
-				result_y_b=tempY;
-			}
+		{	
+			result_x_a=sq;
+			result_y_a=tempY;
+		}
+		else
+		{
+			result_x_b=sq;
+			result_y_b=tempY;
+		}
 		// update if theres more then one result
-				flag++;
+		flag++;
 
 		}
 		else
@@ -161,22 +156,22 @@ void getResult(int num){
 			tempX = (num-tempY)/x;
 			temp = (x*tempX) + tempY;
 
-		// check if the nums are correct for Y
+			// check if the nums are correct for Y
 			if(temp == num)
 			{	if(flag == 0)
-				{
-					result_x_a=tempX;
-					result_y_a=sq;
-				}
-				else	
-				{
-					result_x_b=tempX;
-					result_y_b=sq;
-				}
+			{
+				result_x_a=tempX;
+				result_y_a=sq;
+			}
+			else	
+			{
+				result_x_b=tempX;
+				result_y_b=sq;
+			}
 			flag++;
+			}
 		}
 	}
-}
 
 	// summery
 
@@ -191,9 +186,9 @@ void getResult(int num){
 			tempY = (result_x_b - result_y_b);
 
 			if(tempX<0)
-			tempX *=-1;
-				if(tempY<0)
-			tempY *=-1;
+				tempX *=-1;
+			if(tempY<0)
+				tempY *=-1;
 			// update to the shortest 
 			if(tempX> tempY)
 			{
@@ -201,26 +196,17 @@ void getResult(int num){
 				result_y_a = result_y_b;
 			}
 		}
-
 		// print conclusion 
 		printf("The result: (%d - %d)",result_x_a,result_y_a);
 	}
 }
 
-
-			  
-
-
-
-
-
-
-
 int getInputNum(int hasSondition, int minNum){
-	
+
 	int input = 0;
-	if(hasSondition==0){
-	printf("PLeaze enter the number\n");
+	if(hasSondition==0)
+	{
+		printf("PLeaze enter the number\n");
 		scanf("%d",&input);
 	}
 	else{
