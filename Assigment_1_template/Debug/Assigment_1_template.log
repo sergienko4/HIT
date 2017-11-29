@@ -1,9 +1,13 @@
 ﻿  Program.c
-c:\users\eugene_s\documents\visual studio 2010\projects\assigment_1_template\assigment_1_template\program.c(17): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\eugene_s\documents\visual studio 2010\projects\assigment_1_template\assigment_1_template\program.c(27): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
           c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(304) : see declaration of 'scanf'
-c:\users\eugene_s\documents\visual studio 2010\projects\assigment_1_template\assigment_1_template\program.c(36): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\eugene_s\documents\visual studio 2010\projects\assigment_1_template\assigment_1_template\program.c(46): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
           c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(304) : see declaration of 'scanf'
-c:\users\eugene_s\documents\visual studio 2010\projects\assigment_1_template\assigment_1_template\program.c(39): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\eugene_s\documents\visual studio 2010\projects\assigment_1_template\assigment_1_template\program.c(49): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
           c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(304) : see declaration of 'scanf'
-c:\users\eugene_s\documents\visual studio 2010\projects\assigment_1_template\assigment_1_template\program.c(62): warning C4716: 'getTheBiggestBinery' : must return a value
-  Assigment_1_template.vcxproj -> c:\users\eugene_s\documents\visual studio 2010\Projects\Assigment_1_template\Debug\Assigment_1_template.exe
+c:\users\eugene_s\documents\visual studio 2010\projects\assigment_1_template\assigment_1_template\program.c(216): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(304) : see declaration of 'scanf'
+c:\users\eugene_s\documents\visual studio 2010\projects\assigment_1_template\assigment_1_template\program.c(222): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(304) : see declaration of 'scanf'
+c:\users\eugene_s\documents\visual studio 2010\projects\assigment_1_template\assigment_1_template\program.c(72): warning C4716: 'getTheBiggestBinery' : must return a value
+  Assigment_1_template.vcxproj -> C:\Users\eugene_s\documents\visual studio 2010\Projects\Assigment_1_template\Debug\Assigment_1_template.exe
