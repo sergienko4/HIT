@@ -67,7 +67,6 @@ void getBinery(){
 }
 int getTheBiggestBinery(int length){
 	int i, current, previous, counter =1 , index = 1, biggest=1;
-	int indexStart;
 
 	previous = getInputNum(0,0);
 	for(i=2; i<=length; i++){
