@@ -17,27 +17,27 @@ int perfectnumLogic(int);
 int  main(){
 	int select=0, i, all_Ex_in_loop=0;
 	printf("Run menu once or cyclically?\n(Once - enter 0, cyclically - enter other number) ");
-		if (scanf("%d", &all_Ex_in_loop) == 1)
-			do
+	if (scanf_s("%d", &all_Ex_in_loop) == 1)
+		do
+		{
+			for (i=1; i<=5; i++)
+				printf("Ex%d--->%d\n", i, i);
+			printf("EXIT-->0\n");
+			do {
+				select=0;
+				printf("please select 0-5 : ");
+				scanf_s("%d",&select);
+			} while ((select<0)||(select>5));
+			switch (select)
 			{
-				for (i=1; i<=5; i++)
-					printf("Ex%d--->%d\n", i, i);
-				printf("EXIT-->0\n");
-				do {
-					select=0;
-					printf("please select 0-5 : ");
-					scanf("%d",&select);
-				} while ((select<0)||(select>5));
-				switch (select)
-				{
-				case 1: getSum(); break;
-				case 2: getBinery(); break;
-				case 3: getMinBetweenK(); break;
-				case 4: getResultT(); break;
-				case 5: perfectNum(); break;
-				}
-			} while (all_Ex_in_loop && select);
-			return 0;
+			case 1: getSum(); break;
+			case 2: getBinery(); break;
+			case 3: getMinBetweenK(); break;
+			case 4: getResultT(); break;
+			case 5: perfectNum(); break;
+			}
+		} while (all_Ex_in_loop && select);
+		return 0;
 }
 void getSum(){
 	// input = get inpur from UI, begin = the first num, sum = calc the sum, kefel = kefel, temp = cal the environment 
@@ -146,7 +146,7 @@ void getResult(int num){
 	// to chekc if ZERO 
 	int flagsqZero = 0;
 	sq = num;
-
+	
 	while (sq>0){
 		sq = (int) sqrt(sq);
 
@@ -260,13 +260,13 @@ int getInputNum(int hasSondition, int minNum){
 	if(hasSondition==0)
 	{
 		printf("Please enter the number\n");
-		scanf("%d",&input);
+		scanf_s("%d",&input);
 	}
 	else{
 		while(input<=minNum)
 		{
 			printf("Please enter the number, the number must be bigger than %d\n",minNum);
-			scanf("%d",&input);
+			scanf_s("%d",&input);
 		}
 	}
 	return input;
